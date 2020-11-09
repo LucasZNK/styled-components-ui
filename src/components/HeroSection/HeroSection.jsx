@@ -27,10 +27,7 @@ const HeroSection = (props) => {
       </HeroBg>
       <HeroContent>
         <HeroH1>Virtual Banking Made Easy</HeroH1>
-        <HeroP>
-          Sing up for new account today and reciee $250 in credit towards your
-          next payment.
-        </HeroP>
+        <HeroP>Lucas Zanek portfolio in progress</HeroP>
         <HeroBtnWrapper>
           <Button
             to="signup"
