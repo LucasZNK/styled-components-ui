@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
 import { Button } from "../Button/Button.elements";
 import {
   HeroContainer,
@@ -9,14 +8,15 @@ import {
   HeroP,
   HeroH1,
   HeroBtnWrapper,
-  ArrowFoward,
+  ArrowForward,
   ArrowRight,
 } from "./HeroSection.elements";
 import Video from "../../videos/video.mp4";
 
-const HeroSection = (props) => {
+const HeroSection = () => {
   const [hover, setHover] = useState(false);
-  const buttonIcon = hover ? <ArrowFoward /> : <ArrowRight />;
+  const buttonIcon = hover ? <ArrowForward /> : <ArrowRight />;
+
   const onHover = () => {
     setHover(!hover);
   };
@@ -31,15 +31,15 @@ const HeroSection = (props) => {
           Sing up for new account today and reciee $250 in credit towards your
           next payment.
         </HeroP>
-        <HeroBtnWrapper>
+        <HeroBtnWrapper >
           <Button
             to="signup"
-            onMouseEnter={setHover}
-            onMouseLeave={setHover}
-            primary="true"
-            dark="true"
+            onMouseEnter={onHover}
+            onMouseLeave={onHover}
+            primary='true'
+            dark='true'
           >
-            Get started <ArrowFoward />
+            Get started {buttonIcon}
           </Button>
         </HeroBtnWrapper>
       </HeroContent>
