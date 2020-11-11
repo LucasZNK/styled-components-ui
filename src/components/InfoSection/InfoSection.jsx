@@ -14,10 +14,10 @@ import {
   ImgWrap,
   Img,
 } from './InfoSection.elements';
+
 const InfoSection = ({
-    lightBg,
+  lightBg,
   imgStart,
-  subtitle,
   topLine,
   headline,
   darkText,
@@ -29,7 +29,7 @@ const InfoSection = ({
   primary,
   dark,
   dark2,
-  desc
+  desc,
 }) => {
   return (
     <>
@@ -41,19 +41,20 @@ const InfoSection = ({
                 <TopLine>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headline}</Heading>
                 <Subtitle darkText={darkText}>{desc}</Subtitle>
-
                 <BtnWrap>
-                  <Button to="home"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                  primary={primary ? 1 : 0}
-                  dark={dark ? 1 : 0}
-                  dark2={dark2 ? 1 : 0}
-
-                  >{buttonLabel}</Button>
+                  <Button
+                    to="home"
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact="true"
+                    offset={-80}
+                    primary={primary ? 1 : 0}
+                    dark={dark ? 1 : 0}
+                    dark2={dark2 ? 1 : 0}
+                  >
+                    {buttonLabel}
+                  </Button>
                 </BtnWrap>
               </TextWrapper>
             </Column1>

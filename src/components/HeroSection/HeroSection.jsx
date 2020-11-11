@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Button } from "../Button/Button.elements";
+import React, { useState } from 'react';
+import { Button } from '../Button/Button.elements';
 import {
   HeroContainer,
   HeroBg,
@@ -10,8 +10,8 @@ import {
   HeroBtnWrapper,
   ArrowForward,
   ArrowRight,
-} from "./HeroSection.elements";
-import Video from "../../videos/video.mp4";
+} from './HeroSection.elements';
+import Video from '../../videos/video.mp4';
 
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
@@ -31,13 +31,13 @@ const HeroSection = () => {
           Sing up for new account today and reciee $250 in credit towards your
           next payment.
         </HeroP>
-        <HeroBtnWrapper >
+        <HeroBtnWrapper>
           <Button
             to="signup"
             onMouseEnter={onHover}
             onMouseLeave={onHover}
-            primary='true'
-            dark='true'
+            primary="true"
+            dark="true"
           >
             Get started {buttonIcon}
           </Button>

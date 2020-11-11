@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Sidebar, Navbar, HeroSection , InfoSection} from "../../components";
+import { Sidebar, Navbar, HeroSection , InfoSection, Services} from "../../components";
 import {homeObjOne, homeObjTwo, homeObjThree} from "../../components/InfoSection/Data"
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,6 +15,7 @@ const Home = () => {
       <HeroSection />
       <InfoSection {...homeObjOne}/>
       <InfoSection {...homeObjTwo}/>
+      <Services/>
       <InfoSection {...homeObjThree}/>
 
     </>
