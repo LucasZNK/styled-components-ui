@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const ServicesContainer = styled.div`
+  height: 800px;
   display: flex;
-  height:800px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -39,7 +39,8 @@ export const ServicesWrapper = styled.div`
 export const ServicesCard = styled.div`
   background: #fff;
   display: flex;
-  flex-direction: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   border-radius: 10px;
   max-height: 340px;
@@ -47,11 +48,10 @@ export const ServicesCard = styled.div`
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
 
-
   &:hover {
-      transform: scale(1.02);
-      transition: all 0.2s ease-in-out;
-      cursor: pointer;
+    transform: scale(1.02);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
   }
 `;
 
