@@ -1,23 +1,30 @@
 import React, { useState } from "react";
-import { Sidebar, Navbar, HeroSection , InfoSection, Services} from "../../components";
-import {homeObjOne, homeObjTwo, homeObjThree} from "../../components/InfoSection/Data"
-const Home = () => {
-  const [isOpen, setIsOpen] = useState(false);
+import {
+  Sidebar,
+  Navbar,
+  HeroSection,
+  InfoSection,
+  Services,
+} from "../../components";
+import {
+  homeObjOne,
+  homeObjTwo,
+  homeObjThree,
+} from "../../components/InfoSection/Data";
+import useToggle from "../../utils/hooks/useToggle";
 
-  const toggle = () => {
-    setIsOpen(!isOpen);
-  };
+const Home = () => {
+  const [isOpen, setIsOpen] = useToggle(false);
 
   return (
     <>
-      {/* <Sidebar isOpen={isOpen} toggle={toggle} />
-      <Navbar  /> */}
+      <Sidebar isOpen={isOpen} toggle={setIsOpen} />
+      <Navbar toggle={setIsOpen} />
       <HeroSection />
-      <InfoSection {...homeObjOne}/>
-      <InfoSection {...homeObjTwo}/>
-      <Services/>
-      <InfoSection {...homeObjThree}/>
-
+      <InfoSection {...homeObjOne} />
+      <InfoSection {...homeObjTwo} />
+      <Services />
+      <InfoSection {...homeObjThree} />
     </>
   );
 };
