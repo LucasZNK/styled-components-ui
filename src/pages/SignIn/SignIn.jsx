@@ -1,13 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { SignIn as SignInForm } from '../../components';
 
-const SignIn = props => {
-    return (
-        <div>
-            <h1> Sign in page</h1>
-        </div>
-    )
-}
+const SignIn = (props) => {
+  return <SignInForm />;
+};
 
-
-export default SignIn
+export default SignIn;

@@ -1,17 +1,18 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import {
   Sidebar,
   Navbar,
   HeroSection,
   InfoSection,
   Services,
-} from "../../components";
+  Footer,
+} from '../../components';
 import {
   homeObjOne,
   homeObjTwo,
-  homeObjThree,
-} from "../../components/InfoSection/Data";
-import useToggle from "../../utils/hooks/useToggle";
+  homeObjFour,
+} from '../../components/InfoSection/Data';
+import useToggle from '../../utils/hooks/useToggle';
 
 const Home = () => {
   const [isOpen, setIsOpen] = useToggle(false);
@@ -24,7 +25,8 @@ const Home = () => {
       <InfoSection {...homeObjOne} />
       <InfoSection {...homeObjTwo} />
       <Services />
-      <InfoSection {...homeObjThree} />
+      <InfoSection {...homeObjFour} />
+      <Footer />
     </>
   );
 };
