@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 import {
   SidebarContainer,
   Icon,
@@ -9,7 +9,7 @@ import {
   SidebarLink,
   SideBtnWrap,
   SidebarRoute,
-} from "./Sidebar.elements";
+} from './Sidebar.elements';
 
 const Sidebar = ({ isOpen, toggle }) => {
   return (
@@ -19,10 +19,18 @@ const Sidebar = ({ isOpen, toggle }) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to="about">About</SidebarLink>
-          <SidebarLink to="discover">Discover</SidebarLink>
-          <SidebarLink to="services">Services</SidebarLink>
-          <SidebarLink to="signup">Sign up</SidebarLink>
+          <SidebarLink onClick={toggle} to="about">
+            About
+          </SidebarLink>
+          <SidebarLink onClick={toggle} to="discover">
+            Discover
+          </SidebarLink>
+          <SidebarLink onClick={toggle} to="services">
+            Services
+          </SidebarLink>
+          <SidebarLink onClick={toggle} to="signup">
+            Sign up
+          </SidebarLink>
         </SidebarMenu>
         <SideBtnWrap>
           <SidebarRoute to="/signin">Sign In</SidebarRoute>
